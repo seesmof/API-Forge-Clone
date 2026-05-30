@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" fill="none">
+  <!-- Terminal/bracket icon -->
+  <rect x="2" y="8" width="28" height="24" rx="4" fill="#ea580c"/>
+  <path d="M10 16l4 6-4 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 28h8" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="38" y="28" font-family="Outfit, system-ui, sans-serif" font-size="22" font-weight="700" fill="#1e293b">API<tspan fill="#ea580c">Forge</tspan></text>
+</svg>
