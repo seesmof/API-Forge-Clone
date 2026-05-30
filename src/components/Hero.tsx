@@ -5,6 +5,18 @@ import { useEffect, useState } from "react";
 
 const titles: string[] = ["Faster", "Smarter", "Together", "Securely"];
 
+interface Feature {
+  title: string;
+  description: string;
+}
+
+const features: Feature[] = [
+  { title: "1M+", description: "Developers" },
+  { title: "50B+", description: "API Calls/mo" },
+  { title: "99.999%", description: "Uptime" },
+  { title: "200+", description: "SDKs" },
+];
+
 export default function HeroSection() {
   const [index, setIndex] = useState<number>(0);
   const [title, setTitle] = useState<string>(titles[index]);
@@ -31,6 +43,7 @@ export default function HeroSection() {
           </p>
         </div>
 
+        {/* Header */}
         <h1 className="text-4xl font-bold tracking-tight mt-5">
           Ship Better APIs <br />
           <span className="text-orange-600">{title}</span>
@@ -40,13 +53,28 @@ export default function HeroSection() {
           production-ready APIs with built-in gateway, authentication,
           analytics, and auto-generated SDKs.
         </p>
-        <div className="flex flex-row mt-12 gap-3">
+
+        {/* Call to Action Section */}
+        <article className="flex flex-row mt-12 gap-3">
           <button className="bg-orange-600 hover:bg-orange-700 transition-all duration-150 text-white px-6 py-3 rounded-md">
             <Link href={"#contact"}> Get Free API Key</Link>
           </button>
           <button className="bg-transparent outline-2 outline-stone-300 rounded-md hover:bg-slate-50 cursor-pointer px-6 py-2">
             <Link href={"#services"}>View Documentation</Link>
           </button>
+        </article>
+      </div>
+
+      <div className="border-t border-stone-300 mx-4">
+        <div className="flex flex-row justify-between py-6 pr-6">
+          {features.map((feature, index) => (
+            <div key={index} className="flex flex-col">
+              <p className="text-orange-600 font-semibold text-2xl">
+                {feature.title}
+              </p>
+              <p className="text-sm text-stone-600">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
