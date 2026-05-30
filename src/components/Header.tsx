@@ -22,7 +22,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <div className="top-0 sticky">
+    <div className="top-0 sticky z-50">
       <header className="bg-white/90 border-b border-stone-200">
         <div className="flex justify-between mx-auto px-4 py-2 items-center">
           <Link href={"/"}>
