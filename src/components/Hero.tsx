@@ -40,9 +40,7 @@ export default function HeroSection() {
         <Badge>
           <div className="flex flex-row items-center gap-2">
             <div className="rounded-full animate-pulse bg-orange-600 duration-150 p-1"></div>
-            <p className="text-sm font-semibold text-orange-700">
-              Trusted by 1M+ developers worldwide
-            </p>
+            <p>Trusted by 1M+ developers worldwide</p>
           </div>
         </Badge>
 
@@ -68,7 +66,7 @@ export default function HeroSection() {
         </article>
       </div>
 
-      <div className="border-t border-stone-300 mx-4">
+      <div className="border-t border-stone-300 mx-4 mb-12">
         <div className="flex flex-row justify-between py-6 pr-6">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col">
