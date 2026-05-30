@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Badge from "./Badge";
 
 const titles: string[] = ["Faster", "Smarter", "Together", "Securely"];
 
@@ -36,12 +37,14 @@ export default function HeroSection() {
     <div className="bg-radial from-orange-50">
       <div className="flex flex-col px-4 py-24">
         {/* Badge */}
-        <div className="outline outline-orange-200 bg-orange-50 rounded-full flex flex-row items-center px-4 py-1 gap-2">
-          <div className="rounded-full animate-pulse bg-orange-600 duration-150 p-1"></div>
-          <p className="text-sm font-semibold text-orange-700">
-            Trusted by 1M+ developers worldwide
-          </p>
-        </div>
+        <Badge>
+          <div className="flex flex-row items-center gap-2">
+            <div className="rounded-full animate-pulse bg-orange-600 duration-150 p-1"></div>
+            <p className="text-sm font-semibold text-orange-700">
+              Trusted by 1M+ developers worldwide
+            </p>
+          </div>
+        </Badge>
 
         {/* Header */}
         <h1 className="text-4xl font-bold tracking-tight mt-5">
