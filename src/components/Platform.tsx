@@ -1,5 +1,8 @@
-import { ReactNode } from "react";
+"use client";
+
+import { ReactNode, useState } from "react";
 import Badge from "./Badge";
+import { Star } from "@deemlol/next-icons";
 
 interface Feature {
   icon: ReactNode;
@@ -126,10 +129,57 @@ const features: Feature[] = [
   },
 ];
 
+interface Testimonial {
+  response: string;
+  author: string;
+  position: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    response:
+      "“APIForge cut our API development time in half. The auto-generated SDKs alone saved us months of manual work across six client libraries.”",
+    author: "Sarah Chen",
+    position: "CTO, DataStream Inc.",
+  },
+  {
+    response:
+      "“We migrated from a custom API gateway to APIForge in a weekend. The rate limiting and analytics dashboard are exactly what we needed at scale.”",
+    author: "Marcus Rivera",
+    position: "Lead Engineer, Fintech Labs",
+  },
+  {
+    response:
+      "“The developer experience is unmatched. Our team went from zero to production API in under an hour. The documentation and SDKs are phenomenal.”",
+    author: "Priya Patel",
+    position: "VP Engineering, CloudStack",
+  },
+  {
+    response:
+      "“APIForge handles 2 billion API calls per month for us without breaking a sweat. The 99.999% uptime SLA is real — we have never had an outage.”",
+    author: "James Okafor",
+    position: "Platform Director, ScaleForce",
+  },
+  {
+    response:
+      "“Moving to APIForge simplified our entire backend architecture. One platform for gateway, auth, and monitoring instead of five different tools.”",
+    author: "Emily Zhang",
+    position: "Senior Developer, NexaTech",
+  },
+  {
+    response:
+      "“The webhook management system is brilliant. Automatic retries with exponential backoff and detailed delivery logs made our integrations rock-solid.”",
+    author: "Daniel Kim",
+    position: "API Architect, PayRoute",
+  },
+];
+
 export default function PlatformSection() {
+  const [currentTestimonial, setCurrentTestimonial] = useState<number>(0);
+
   return (
     <div className="bg-stone-50 border-t border-stone-300">
-      <div className="px-4 py-12 flex flex-col">
+      <div className="px-4 pt-16 flex flex-col">
         <Badge className="self-center">Platform</Badge>
         <article className="text-center">
           <h2 className="font-bold text-3xl mt-4 tracking-tight">
@@ -154,6 +204,51 @@ export default function PlatformSection() {
             </div>
           ))}
         </article>
+      </div>
+      <div className="px-4 pt-24 flex flex-col">
+        <Badge className="self-center">Testimonials</Badge>
+        <article className="text-center">
+          <h2 className="font-bold text-3xl mt-4 tracking-tight">
+            Trusted by Engineering Teams
+          </h2>
+          <p className="mt-3">
+            Hear from the developers and CTOs who rely on APIForge to power
+            their API infrastructure.
+          </p>
+        </article>
+        <div className="flex flex-row gap-3 pt-12">
+          <button className="h-8 w-8 rounded-full self-center bg-white cursor-pointer shadow-md">
+            &lt;
+          </button>
+          <div className="bg-white flex-1 p-5 rounded-2xl shadow">
+            <div className="flex flex-row gap-1">
+              <Star fill="#f97316" stroke="#f97316" className="scale-75" />
+              <Star fill="#f97316" stroke="#f97316" className="scale-75" />
+              <Star fill="#f97316" stroke="#f97316" className="scale-75" />
+              <Star fill="#f97316" stroke="#f97316" className="scale-75" />
+              <Star fill="#f97316" stroke="#f97316" className="scale-75" />
+            </div>
+            <p className="font-bold my-5">
+              {testimonials[currentTestimonial].response}
+            </p>
+            <div className="flex flex-row gap-3 items-center">
+              <span className="rounded-full bg-orange-50 text-orange-600 h-12 w-12 flex items-center justify-center font-semibold">
+                {testimonials[currentTestimonial].author.slice(0, 1)}
+              </span>
+              <div className="flex flex-col text-sm">
+                <span className="font-bold">
+                  {testimonials[currentTestimonial].author}
+                </span>
+                <span className="text-stone-700">
+                  {testimonials[currentTestimonial].position}
+                </span>
+              </div>
+            </div>
+          </div>
+          <button className="h-8 w-8 rounded-full self-center bg-white cursor-pointer shadow-md">
+            &gt;
+          </button>
+        </div>
       </div>
     </div>
   );
