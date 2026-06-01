@@ -59,9 +59,31 @@ export default function StartSection() {
           <div className="flex flex-col">
             <label htmlFor="type">Project Type</label>
             <select name="type" id="type">
+              <option value="" disabled selected hidden>
+                Select a project type
+              </option>
               <option value="residential">Residential Consturction</option>
+              <option value="commercial">Commercial Building</option>
+              <option value="renovation">Renovation & Remodeling</option>
+              <option value="interior">Interior Design</option>
+              <option value="other">Other</option>
             </select>
           </div>
+
+          <div className="flex flex-col">
+            <label htmlFor="details">Project Details</label>
+            <textarea
+              className="resize-none"
+              name="details"
+              id="details"
+              rows={5}
+              placeholder="Tell us about your project..."
+            />
+          </div>
+
+          <button className="cursor-pointer duration-150 hover:bg-orange-700 bg-orange-600 text-white font-semibold w-full rounded-md py-2 shadow shadow-orange-300">
+            Send Message
+          </button>
         </form>
       </div>
     </div>
