@@ -31,7 +31,6 @@ export default function Header() {
               width={120}
               height={120}
               alt="A logo image of API Forge."
-              className="h-8"
             />
           </Link>
 
