@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/Hero";
 import PlatformSection from "@/components/Platform";
+import StartSection from "@/components/Start";
 
 export default function Page() {
   return (
@@ -8,6 +9,7 @@ export default function Page() {
       <Header />
       <HeroSection />
       <PlatformSection />
+      <StartSection />
     </div>
   );
 }

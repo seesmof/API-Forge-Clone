@@ -229,7 +229,7 @@ export default function PlatformSection() {
             their API infrastructure.
           </p>
         </article>
-        <div className="flex flex-row pt-12">
+        <div className="flex flex-row py-12">
           <button
             onClick={() => {
               const prevTestimonial =
