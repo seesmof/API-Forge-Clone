@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Badge from "./Badge";
 import { Star } from "@deemlol/next-icons";
 
@@ -177,6 +177,19 @@ const testimonials: Testimonial[] = [
 export default function PlatformSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState<number>(0);
 
+  useEffect(() => {
+    const counter = setTimeout(() => {
+      const nextTestimonial =
+        currentTestimonial < testimonials.length - 1
+          ? currentTestimonial + 1
+          : 0;
+      setCurrentTestimonial(nextTestimonial);
+      console.log(nextTestimonial);
+    }, 3000);
+
+    return () => clearTimeout(counter);
+  }, [currentTestimonial]);
+
   return (
     <div className="bg-stone-50 border-t border-stone-300">
       <div className="px-4 pt-16 flex flex-col">
@@ -216,12 +229,21 @@ export default function PlatformSection() {
             their API infrastructure.
           </p>
         </article>
-        <div className="flex flex-row gap-3 pt-12">
-          <button className="h-8 w-8 rounded-full self-center bg-white cursor-pointer shadow-md">
+        <div className="flex flex-row pt-12">
+          <button
+            onClick={() => {
+              const prevTestimonial =
+                currentTestimonial > 0
+                  ? currentTestimonial - 1
+                  : testimonials.length - 1;
+              setCurrentTestimonial(prevTestimonial);
+            }}
+            className="h-8 w-8 rounded-full self-center translate-x-2 bg-white cursor-pointer shadow-md"
+          >
             &lt;
           </button>
           <div className="bg-white flex-1 p-5 rounded-2xl shadow">
-            <div className="flex flex-row gap-1">
+            <div className="flex flex-row">
               <Star fill="#f97316" stroke="#f97316" className="scale-75" />
               <Star fill="#f97316" stroke="#f97316" className="scale-75" />
               <Star fill="#f97316" stroke="#f97316" className="scale-75" />
@@ -245,7 +267,16 @@ export default function PlatformSection() {
               </div>
             </div>
           </div>
-          <button className="h-8 w-8 rounded-full self-center bg-white cursor-pointer shadow-md">
+          <button
+            onClick={() => {
+              const nextTestimonial =
+                currentTestimonial < testimonials.length - 1
+                  ? currentTestimonial + 1
+                  : 0;
+              setCurrentTestimonial(nextTestimonial);
+            }}
+            className="h-8 w-8 rounded-full self-center -translate-x-2 bg-white cursor-pointer shadow-md"
+          >
             &gt;
           </button>
         </div>
