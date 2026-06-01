@@ -67,7 +67,7 @@ export default function HeroSection() {
       </div>
 
       <div className="border-t border-stone-300 mx-4 mb-12">
-        <div className="flex flex-row justify-between py-6 pr-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 justify-between py-6 pr-6">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col">
               <p className="text-orange-600 font-semibold text-2xl">
