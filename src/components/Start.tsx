@@ -1,4 +1,42 @@
+import { ReactNode } from "react";
 import Badge from "./Badge";
+
+const Phone = () => {
+  return (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ea580c">
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+      ></path>{" "}
+    </svg>
+  );
+};
+
+const Email = () => {
+  return (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ea580c">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+      ></path>{" "}
+    </svg>
+  );
+};
+
+interface Contact {
+  icon: ReactNode;
+  title: string;
+  value: string;
+}
+
+const contact: Contact[] = [
+  { icon: <Phone />, title: "Phone", value: "(555) 678-9012" },
+  { icon: <Email />, title: "Email", value: "hello@apiforge.dev" },
+];
 
 export default function StartSection() {
   return (
@@ -15,8 +53,8 @@ export default function StartSection() {
           </p>
         </article>
 
-        <form className="mt-12">
-          <div className="flex flex-col">
+        <form className="mt-16 gap-5 flex flex-col">
+          <div className="flex flex-col gap-2">
             <label
               className="font-bold text-sm cursor-pointer"
               htmlFor="fullName"
@@ -28,10 +66,12 @@ export default function StartSection() {
               placeholder="John Doe"
               name="fullName"
               id="fullName"
+              className="px-3 py-2 outline focus:outline-2 focus:outline-orange-600 rounded-md"
+              required
             />
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-2">
             <label className="font-bold text-sm cursor-pointer" htmlFor="email">
               Email Address
             </label>
@@ -40,10 +80,11 @@ export default function StartSection() {
               placeholder="john@example.com"
               name="email"
               id="email"
+              className="px-3 py-2 outline focus:outline-2 focus:outline-orange-600 rounded-md"
             />
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-2">
             <label className="font-bold text-sm cursor-pointer" htmlFor="phone">
               Phone Number
             </label>
@@ -53,13 +94,22 @@ export default function StartSection() {
               name="phone"
               id="phone"
               maxLength={10}
+              className="px-3 py-2 outline focus:outline-2 focus:outline-orange-600 rounded-md"
             />
           </div>
 
-          <div className="flex flex-col">
-            <label htmlFor="type">Project Type</label>
-            <select name="type" id="type">
-              <option value="" disabled selected hidden>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="type" className="font-bold text-sm cursor-pointer">
+              Project Type
+            </label>
+            <select
+              name="type"
+              id="type"
+              className="px-3 py-2 outline focus:outline-2 focus:outline-orange-600 rounded-md"
+              required
+              defaultValue=""
+            >
+              <option value="" disabled hidden>
                 Select a project type
               </option>
               <option value="residential">Residential Consturction</option>
@@ -70,14 +120,20 @@ export default function StartSection() {
             </select>
           </div>
 
-          <div className="flex flex-col">
-            <label htmlFor="details">Project Details</label>
+          <div className="flex flex-col gap-2">
+            <label
+              htmlFor="details"
+              className="font-bold text-sm cursor-pointer"
+            >
+              Project Details
+            </label>
             <textarea
-              className="resize-none"
               name="details"
               id="details"
               rows={5}
               placeholder="Tell us about your project..."
+              className="px-3 py-2 outline focus:outline-2 focus:outline-orange-600 rounded-md resize-none"
+              required
             />
           </div>
 
@@ -85,6 +141,20 @@ export default function StartSection() {
             Send Message
           </button>
         </form>
+      </div>
+
+      <div className="flex flex-col gap-8 px-4 mt-5">
+        {contact.map((item, index) => (
+          <div className="flex flex-row gap-5 items-center" key={index}>
+            <div className="h-12 w-12 flex items-center justify-center bg-orange-50 rounded-md stroke-orange-600">
+              {item.icon}
+            </div>
+            <div className="flex flex-col text-sm">
+              <span className="font-bold">{item.title}</span>
+              <span>{item.value}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
