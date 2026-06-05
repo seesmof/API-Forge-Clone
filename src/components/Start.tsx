@@ -18,10 +18,42 @@ const Email = () => {
   return (
     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ea580c">
       <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+      ></path>{" "}
+    </svg>
+  );
+};
+
+const Address = () => {
+  return (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ea580c">
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+      ></path>{" "}
+      <path
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="2"
-        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+      ></path>{" "}
+    </svg>
+  );
+};
+
+const Clock = () => {
+  return (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ea580c">
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
       ></path>{" "}
     </svg>
   );
@@ -36,6 +68,16 @@ interface Contact {
 const contact: Contact[] = [
   { icon: <Phone />, title: "Phone", value: "(555) 678-9012" },
   { icon: <Email />, title: "Email", value: "hello@apiforge.dev" },
+  {
+    icon: <Address />,
+    title: "Address",
+    value: "200 Congress Ave, Austin, TX 78701",
+  },
+  {
+    icon: <Clock />,
+    title: "Office Hours",
+    value: "Mon - Fri: 7:00 AM - 6:00 PM\nSat: 8:00 AM - 2:00 PM\nSun: Closed",
+  },
 ];
 
 export default function StartSection() {
@@ -145,16 +187,21 @@ export default function StartSection() {
 
       <div className="flex flex-col gap-8 px-4 mt-5">
         {contact.map((item, index) => (
-          <div className="flex flex-row gap-5 items-center" key={index}>
+          <div className="flex flex-row gap-5 items-start" key={index}>
             <div className="h-12 w-12 flex items-center justify-center bg-orange-50 rounded-md stroke-orange-600">
               {item.icon}
             </div>
-            <div className="flex flex-col text-sm">
+            <div className="flex flex-col text-sm pt-2">
               <span className="font-bold">{item.title}</span>
-              <span>{item.value}</span>
+              <pre className="font-sans">{item.value}</pre>
             </div>
           </div>
         ))}
+        <iframe
+          className="w-full rounded-md"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55448.45392857408!2d-95.40258045!3d29.7604267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bf244cde1c5b%3A0x3e0e8f9b0e7e4c8a!2sDowntown%20Houston%2C%20Houston%2C%20TX!5e0!3m2!1sen!2sus!4v1"
+          frameBorder="0"
+        ></iframe>
       </div>
     </div>
   );
