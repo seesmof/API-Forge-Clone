@@ -1,3 +1,4 @@
+import ContactSection from "@/components/Contact";
 import Header from "@/components/Header";
 import HeroSection from "@/components/Hero";
 import PlatformSection from "@/components/Platform";
@@ -10,6 +11,7 @@ export default function Page() {
       <HeroSection />
       <PlatformSection />
       <StartSection />
+      <ContactSection />
     </div>
   );
 }

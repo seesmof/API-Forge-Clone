@@ -258,7 +258,7 @@ export default function StartSection() {
         ></iframe>
       </div>
 
-      <div className="mt-12 px-4">
+      <div className="mt-24 px-4">
         <article className="text-center flex flex-col">
           <Badge className="self-center">FAQ</Badge>
           <h2 className="font-bold text-3xl mt-4 tracking-tight">
