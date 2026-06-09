@@ -1,6 +1,6 @@
 export default function ContactSection() {
   return (
-    <div className="bg-linear-to-br from-orange-500 to-orange-800 mt-12">
+    <div className="bg-linear-to-br from-orange-600 to-orange-800 mt-12">
       <div className="px-4 py-16 flex flex-col text-white text-center">
         <h2 className="mb-4 font-bold text-3xl">Ready to Ship Better APIs?</h2>
         <p className="font-medium">

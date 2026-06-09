@@ -1,4 +1,5 @@
 import ContactSection from "@/components/Contact";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/Hero";
 import PlatformSection from "@/components/Platform";
@@ -12,6 +13,7 @@ export default function Page() {
       <PlatformSection />
       <StartSection />
       <ContactSection />
+      <Footer />
     </div>
   );
 }
