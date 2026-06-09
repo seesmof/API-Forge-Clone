@@ -57,6 +57,98 @@ export default function Footer() {
             </Link>
           </div>
         </article>
+
+        <article className="mt-8 flex flex-col sm:flex-row sm:justify-between mr-20 gap-5">
+          <div>
+            <h3 className="text-white font-bold uppercase">Products</h3>
+            <div className="flex flex-col gap-2 mt-2">
+              <Link
+                className="transition duration-150 hover:text-white"
+                href="#"
+              >
+                API Gateway
+              </Link>
+              <Link
+                className="transition duration-150 hover:text-white"
+                href="#"
+              >
+                Authentication
+              </Link>
+              <Link
+                className="transition duration-150 hover:text-white"
+                href="#"
+              >
+                Analytics
+              </Link>
+              <Link
+                className="transition duration-150 hover:text-white"
+                href="#"
+              >
+                Webhooks
+              </Link>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-white font-bold uppercase">Developers</h3>
+            <div className="flex flex-col gap-2 mt-2">
+              <Link
+                className="transition duration-150 hover:text-white"
+                href="#"
+              >
+                Documentation
+              </Link>
+              <Link
+                className="transition duration-150 hover:text-white"
+                href="#"
+              >
+                SDKs
+              </Link>
+              <Link
+                className="transition duration-150 hover:text-white"
+                href="#"
+              >
+                API Reference
+              </Link>
+              <Link
+                className="transition duration-150 hover:text-white"
+                href="#"
+              >
+                Changelog
+              </Link>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-white font-bold uppercase">Company</h3>
+            <div className="flex flex-col gap-2 mt-2">
+              <Link
+                className="transition duration-150 hover:text-white"
+                href="#"
+              >
+                About
+              </Link>
+              <Link
+                className="transition duration-150 hover:text-white"
+                href="#"
+              >
+                Blog
+              </Link>
+              <Link
+                className="transition duration-150 hover:text-white"
+                href="#"
+              >
+                Careers
+              </Link>
+              <Link
+                className="transition duration-150 hover:text-white"
+                href="#"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   );
