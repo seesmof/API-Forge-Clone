@@ -191,7 +191,7 @@ export default function PlatformSection() {
   }, [currentTestimonial]);
 
   return (
-    <div className="bg-stone-50 border-t border-stone-300">
+    <div id="servicesSection" className="bg-stone-50 border-t border-stone-300">
       <div className="px-4 pt-16 flex flex-col">
         <Badge className="self-center">Platform</Badge>
         <article className="text-center">

@@ -7,11 +7,11 @@ export default function ContactSection() {
           Join 1M+ developers building production-ready APIs with APIForge. Get
           started free — no credit card required.
         </p>
-        <div className="flex gap-3 mt-10 justify-center">
-          <button className="bg-white hover:bg-white/95 hover:outline-white/95 hover:shadow-xl cursor-pointer outline-2 outline-white rounded-md text-orange-800 p-2 px-6 transition duration-150">
+        <div className="flex sm:flex-row flex-col gap-3 mt-10 justify-center">
+          <button className="bg-white hover:bg-white/95 hover:outline-white/95 hover:shadow-xl cursor-pointer outline-2 outline-white rounded-md text-orange-800 p-2 px-6 transition duration-150 w-fit self-center">
             Get Free API Key
           </button>
-          <button className="rounded-md cursor-pointer outline-2 outline-white/30 p-2 px-6 transition hover:outline-white/70 duration-150">
+          <button className="rounded-md cursor-pointer outline-2 outline-white/30 p-2 px-6 transition hover:outline-white/70 duration-150 w-fit self-center">
             Talk to Sales
           </button>
         </div>

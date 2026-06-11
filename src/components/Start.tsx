@@ -121,7 +121,7 @@ const QuestionComponent = ({ title, content }: Question) => {
   return (
     <>
       <div
-        className="flex flex-row justify-between items-center pb-3"
+        className="flex flex-row justify-between gap-3 items-center pb-3"
         onClick={() => setIsOpen((isOpen) => !isOpen)}
       >
         <h3 className="font-bold">{title}</h3>

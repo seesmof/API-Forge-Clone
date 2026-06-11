@@ -61,7 +61,7 @@ export default function HeroSection() {
             <Link href="#startSection"> Get Free API Key</Link>
           </button>
           <button className="bg-transparent outline-2 outline-stone-300 rounded-md hover:bg-slate-50 cursor-pointer px-6 py-2">
-            <Link href={"#services"}>View Documentation</Link>
+            <Link href="#servicesSection">View Documentation</Link>
           </button>
         </article>
       </div>
