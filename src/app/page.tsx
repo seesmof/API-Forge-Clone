@@ -5,11 +5,11 @@ import StartSection from "@/components/Start";
 
 export default function Page() {
   return (
-    <div className="flex flex-col">
+    <>
       <HeroSection />
       <PlatformSection />
       <StartSection />
       <ContactSection />
-    </div>
+    </>
   );
 }
