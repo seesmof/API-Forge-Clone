@@ -136,7 +136,7 @@ const QuestionComponent = ({ title, content }: Question) => {
 
 export default function StartSection() {
   return (
-    <div className="bg-white">
+    <div className="bg-white" id="startSection">
       <div className="px-4 pt-16 flex flex-col">
         <Badge className="self-center">Get Started</Badge>
         <article className="text-center">

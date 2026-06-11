@@ -45,7 +45,7 @@ export default function HeroSection() {
         </Badge>
 
         {/* Header */}
-        <h1 className="text-4xl font-bold tracking-tight mt-5">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mt-5">
           Ship Better APIs <br />
           <span className="text-orange-600">{title}</span>
         </h1>
@@ -56,9 +56,9 @@ export default function HeroSection() {
         </p>
 
         {/* Call to Action Section */}
-        <article className="flex flex-row mt-12 gap-3">
+        <article className="flex flex-col sm:flex-row mt-12 gap-3">
           <button className="bg-orange-600 hover:bg-orange-700 transition-all duration-150 text-white px-6 py-3 rounded-md">
-            <Link href={"#contact"}> Get Free API Key</Link>
+            <Link href="#startSection"> Get Free API Key</Link>
           </button>
           <button className="bg-transparent outline-2 outline-stone-300 rounded-md hover:bg-slate-50 cursor-pointer px-6 py-2">
             <Link href={"#services"}>View Documentation</Link>
