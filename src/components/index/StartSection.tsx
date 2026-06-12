@@ -125,7 +125,7 @@ const QuestionComponent = ({ title, content }: Question) => {
         onClick={() => setIsOpen((isOpen) => !isOpen)}
       >
         <h3 className="font-bold">{title}</h3>
-        <button className="rounded-full bg-stone-300 h-8 w-8 flex items-center justify-center">
+        <button className="rounded-full bg-stone-200/50 h-8 w-8 flex items-center justify-center">
           {isOpen ? "x" : "+"}
         </button>
       </div>
