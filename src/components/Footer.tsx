@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="bg-stone-900 text-gray-400">
-      <div className="px-4 py-12">
+      <div className="px-4 py-12 mx-auto max-w-3xl">
         <article className="w-2/3">
           <h3 className="font-bold text-white text-lg">
             API<span className="text-orange-300">Forge</span>

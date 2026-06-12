@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <div className="top-0 sticky z-50">
       <header className="bg-white/90 border-b border-stone-200">
-        <div className="flex justify-between mx-auto px-4 py-2 items-center">
+        <div className="flex justify-between mx-auto max-w-3xl px-4 py-2 items-center">
           <Link href={"/"}>
             <Image
               src={"/logo.svg"}
@@ -50,7 +50,7 @@ export default function Header() {
 
       {isMenuOpen && (
         <div className="bg-white border-b border-stone-200">
-          <div className="font-semibold flex-col flex p-3 gap-5">
+          <div className="font-semibold flex-col flex p-3 gap-5 mx-auto max-w-3xl">
             {linksData.map((link, index) => (
               <Link
                 key={index}
