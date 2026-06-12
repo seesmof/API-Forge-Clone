@@ -1,3 +1,4 @@
+import FAQSection from "@/components/index/FAQSection";
 import Badge from "@/components/small/Badge";
 import { Check, X } from "@deemlol/next-icons";
 import Link from "next/link";
@@ -196,6 +197,8 @@ export default function Page() {
             All plans include the full platform. Pricing is based on monthly API
             calls. Volume discounts available for annual billing.
           </p>
+
+          <FAQSection className="mt-32" />
         </div>
       </section>
     </>
