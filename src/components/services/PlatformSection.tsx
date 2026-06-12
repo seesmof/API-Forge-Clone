@@ -204,7 +204,7 @@ const Feature = ({ icon, heading, paragraph, pros }: FeatureProps) => {
 export default function PlatformSection() {
   return (
     <section className="bg-white">
-      <div className="py-16 px-4 mx-auto max-w-3xl">
+      <div className="py-16 px-4 mx-auto max-w-7xl">
         <article className="text-center">
           <h2 className="font-bold text-3xl">The API Platform</h2>
           <p className="mt-4">
