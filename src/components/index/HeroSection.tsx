@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Badge from "./Badge";
+import Badge from "../small/Badge";
 
 const titles: string[] = ["Faster", "Smarter", "Together", "Securely"];
 

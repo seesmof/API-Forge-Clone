@@ -1,7 +1,7 @@
-import ContactSection from "@/components/Contact";
-import HeroSection from "@/components/Hero";
-import PlatformSection from "@/components/Platform";
-import StartSection from "@/components/Start";
+import ContactSection from "@/components/index/ContactSection";
+import HeroSection from "@/components/index/HeroSection";
+import PlatformSection from "@/components/index/PlatformSection";
+import StartSection from "@/components/index/StartSection";
 
 export default function Page() {
   return (

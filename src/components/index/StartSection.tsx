@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode, useState } from "react";
-import Badge from "./Badge";
+import Badge from "../small/Badge";
 
 const Phone = () => {
   return (

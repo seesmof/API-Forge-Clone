@@ -1,8 +1,8 @@
 "use client";
 
 import { ReactNode, useEffect, useState } from "react";
-import Badge from "./Badge";
 import { Star } from "@deemlol/next-icons";
+import Badge from "../small/Badge";
 
 interface Feature {
   icon: ReactNode;
