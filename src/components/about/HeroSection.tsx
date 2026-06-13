@@ -9,7 +9,7 @@ export default function HeroSection() {
           Founded in 2022, we are building the developer-first API
           infrastructure platform that engineering teams deserve.
         </p>
-        <p className="text-sm mt-4">
+        <div className="text-sm mt-4">
           <Link
             className="text-white/50 hover:text-white duration-150"
             href="/"
@@ -17,7 +17,7 @@ export default function HeroSection() {
             Home
           </Link>{" "}
           / About
-        </p>
+        </div>
       </div>
     </section>
   );
