@@ -1,3 +1,4 @@
+import ValuesSection from "@/components/about/ValuesSection";
 import Badge from "@/components/small/Badge";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,7 +28,7 @@ export default function Page() {
 
       {/* Mission */}
       <section className="bg-white">
-        <div className="px-4 py-12 mx-auto max-w-7xl flex flex-col gap-4">
+        <div className="px-4 py-20 mx-auto max-w-7xl flex flex-col gap-4">
           <Badge>Our Mission</Badge>
           <h1 className="text-3xl font-bold">APIs Should Just Work</h1>
           <p className="text-orange-700/80 italic font-semibold">
@@ -57,6 +58,8 @@ export default function Page() {
           />
         </div>
       </section>
+
+      <ValuesSection />
     </>
   );
 }
