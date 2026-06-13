@@ -1,7 +1,77 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+
+interface Article {
+  imageName: string;
+  category: "Architecture" | "Enginerring" | "Developer Experience";
+  publishingDate: string;
+  title: string;
+  description: string;
+  profilePictureName: string;
+  authorName: string;
+  readingTime: number;
+}
+
+const articles: Article[] = [
+  {
+    imageName: "laptop",
+    category: "Architecture",
+    publishingDate: "Feb 20, 2026",
+    title: "REST vs GraphQL in 2026: Which Should You Choose?",
+    description:
+      "A practical comparison of REST and GraphQL for modern API development, with guidance on when to use each approach.",
+    profilePictureName: "Maya",
+    authorName: "Maya Rodriguez",
+    readingTime: 7,
+  },
+  {
+    imageName: "server",
+    category: "Enginerring",
+    publishingDate: "Feb 15, 2026",
+    title: "API Rate Limiting Strategies That Actually Work",
+    description:
+      "Learn proven rate limiting patterns that protect your APIs without frustrating legitimate users.",
+    profilePictureName: "Alex",
+    authorName: "Alex Kim",
+    readingTime: 6,
+  },
+  {
+    imageName: "gray",
+    category: "Developer Experience",
+    publishingDate: "Feb 10, 2026",
+    title: "Building Developer Portals That Developers Actually Use",
+    description:
+      "The essential ingredients of a developer portal that drives adoption and reduces support burden.",
+    profilePictureName: "Priya",
+    authorName: "Priya Sharma",
+    readingTime: 8,
+  },
+  {
+    imageName: "glasses",
+    category: "Architecture",
+    publishingDate: "Feb 5, 2026",
+    title: "API Versioning Best Practices for Long-Lived APIs",
+    description:
+      "Strategies for evolving your API without breaking existing integrations, from URL versioning to content negotiation.",
+    profilePictureName: "Jordan",
+    authorName: "Jordan Lee",
+    readingTime: 6,
+  },
+  {
+    imageName: "stats",
+    category: "Enginerring",
+    publishingDate: "Feb 28, 2026",
+    title: "Webhook Reliability Patterns for Production Systems",
+    description:
+      "How to build webhook delivery systems that never lose events, from retry strategies to dead letter queues.",
+    profilePictureName: "Alex",
+    authorName: "Alex Kim",
+    readingTime: 7,
+  },
+];
 
 export default function Page() {
   const [search, setSearch] = useState<string>("");
@@ -68,6 +138,30 @@ export default function Page() {
             >
               Developer Experience
             </button>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 mt-10">
+            {articles.map((article, index) => (
+              <div className="rounded-xl overflow-clip shadow-md" key={index}>
+                <Image
+                  src={`/${article.imageName}.jfif`}
+                  width={800}
+                  height={500}
+                  alt={`An image of ${article.imageName}.`}
+                />
+
+                <div className="p-4 flex flex-col">
+                  <div className="flex gap-3 text-sm items-center">
+                    <div className="bg-orange-50 text-orange-700 font-semibold px-2 py-0.5">
+                      {article.category}
+                    </div>
+                    <p className="text-stone-600">{article.publishingDate}</p>
+                  </div>
+                  <h2 className="font-bold text-lg my-3">{article.title}</h2>
+                  <p className="text-sm">{article.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
