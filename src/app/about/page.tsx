@@ -1,3 +1,4 @@
+import TeamSection from "@/components/about/TeamSection";
 import ValuesSection from "@/components/about/ValuesSection";
 import Badge from "@/components/small/Badge";
 import Image from "next/image";
@@ -60,6 +61,7 @@ export default function Page() {
       </section>
 
       <ValuesSection />
+      <TeamSection />
     </>
   );
 }

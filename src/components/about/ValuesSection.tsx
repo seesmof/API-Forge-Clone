@@ -42,7 +42,7 @@ const values: Value[] = [
 export default function ValuesSection() {
   return (
     <section className="bg-stone-100">
-      <div className="px-4 py-12 mx-auto max-w-7xl">
+      <div className="px-4 py-20 mx-auto max-w-7xl">
         <article className="text-center">
           <h2 className="font-bold text-3xl">Our Values</h2>
           <p className="mt-4 text-stone-600">
