@@ -142,26 +142,62 @@ export default function Page() {
 
           <div className="grid grid-cols-1 gap-8 mt-10">
             {articles.map((article, index) => (
-              <div className="rounded-xl overflow-clip shadow-md" key={index}>
-                <Image
-                  src={`/${article.imageName}.jfif`}
-                  width={800}
-                  height={500}
-                  alt={`An image of ${article.imageName}.`}
-                />
+              <div
+                className="rounded-xl overflow-clip shadow-md duration-300 hover:shadow-xl group"
+                key={index}
+              >
+                <div className="h-60 overflow-clip">
+                  <Image
+                    src={`/${article.imageName}.jfif`}
+                    width={800}
+                    height={500}
+                    alt={`An image of ${article.imageName}.`}
+                    className="group-hover:scale-105 duration-300"
+                  />
+                </div>
 
-                <div className="p-4 flex flex-col">
+                <div className="p-6 flex flex-col">
                   <div className="flex gap-3 text-sm items-center">
                     <div className="bg-orange-50 text-orange-700 font-semibold px-2 py-0.5">
                       {article.category}
                     </div>
                     <p className="text-stone-600">{article.publishingDate}</p>
                   </div>
-                  <h2 className="font-bold text-lg my-3">{article.title}</h2>
+                  <h2 className="font-bold text-lg my-3 group-hover:text-orange-600 duration-300">
+                    {article.title}
+                  </h2>
                   <p className="text-sm">{article.description}</p>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="rounded-xl bg-stone-900 text-white mt-24">
+            <div className="px-8 py-18 flex flex-col gap-5 text-center">
+              <div className="bg-orange-900/50 text-orange-400 px-3 py-1 rounded-full font-semibold text-sm w-fit self-center">
+                Newsletter
+              </div>
+              <h3 className="font-bold text-3xl">Stay in the Loop</h3>
+              <p className="text-gray-400">
+                Subscribe to our newsletter for the latest articles, tips, and
+                updates delivered straight to your inbox.
+              </p>
+              <form className="flex flex-col gap-3">
+                <input
+                  type="email"
+                  name="emailInput"
+                  id="emailInput"
+                  placeholder="Enter your email"
+                  className="rounded-full bg-gray-800 outline-gray-700 outline-1 placeholder:text-gray-500 w-full px-4 py-3"
+                />
+                <button
+                  type="submit"
+                  className="bg-orange-600 font-bold w-full rounded-full p-3 cursor-pointer duration-150 hover:bg-orange-600/70"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
