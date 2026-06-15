@@ -13,6 +13,7 @@ interface Article {
   profilePictureName: string;
   authorName: string;
   readingTime: number;
+  href?: string;
 }
 
 const articles: Article[] = [
@@ -26,6 +27,7 @@ const articles: Article[] = [
     profilePictureName: "Maya",
     authorName: "Maya Rodriguez",
     readingTime: 7,
+    href: "rest-vs-graphql-2026",
   },
   {
     imageName: "server",
@@ -146,28 +148,45 @@ export default function Page() {
                 className="rounded-xl overflow-clip shadow-md duration-300 hover:shadow-xl group"
                 key={index}
               >
-                <div className="h-60 overflow-clip">
-                  <Image
-                    src={`/${article.imageName}.jfif`}
-                    width={800}
-                    height={500}
-                    alt={`An image of ${article.imageName}.`}
-                    className="group-hover:scale-105 duration-300"
-                  />
-                </div>
-
-                <div className="p-6 flex flex-col">
-                  <div className="flex gap-3 text-sm items-center">
-                    <div className="bg-orange-50 text-orange-700 font-semibold px-2 py-0.5">
-                      {article.category}
-                    </div>
-                    <p className="text-stone-600">{article.publishingDate}</p>
+                <Link href={`/blog/${article.href}/`}>
+                  <div className="h-60 overflow-clip">
+                    <Image
+                      src={`/${article.imageName}.jfif`}
+                      width={800}
+                      height={500}
+                      alt={`An image of ${article.imageName}.`}
+                      className="group-hover:scale-105 duration-300"
+                    />
                   </div>
-                  <h2 className="font-bold text-lg my-3 group-hover:text-orange-600 duration-300">
-                    {article.title}
-                  </h2>
-                  <p className="text-sm">{article.description}</p>
-                </div>
+
+                  <div className="p-6 flex flex-col">
+                    <div className="flex gap-3 text-sm items-center">
+                      <div className="bg-orange-50 text-orange-700 font-semibold px-2 py-0.5">
+                        {article.category}
+                      </div>
+                      <p className="text-stone-600">{article.publishingDate}</p>
+                    </div>
+                    <h2 className="font-bold text-lg my-3 group-hover:text-orange-600 duration-300">
+                      {article.title}
+                    </h2>
+                    <p className="text-sm">{article.description}</p>
+                    <div className="flex gap-3 mt-4 items-center">
+                      <Image
+                        src={`/${article.profilePictureName}.jfif`}
+                        alt="An image of the author of the blog post."
+                        width={30}
+                        height={30}
+                        className="rounded-full w-10"
+                      />
+                      <div className="flex flex-col text-sm">
+                        <h5 className="font-bold">{article.authorName}</h5>
+                        <p className="text-stone-600/80">
+                          {article.readingTime} min read
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>
