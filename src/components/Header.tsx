@@ -39,7 +39,7 @@ export default function Header() {
               <Link href={"/pricing"}>Get API Key</Link>
             </button>
             <button
-              className="hover:bg-stone-200 rounded-md p-1 cursor-pointer"
+              className="hover:bg-stone-200 rounded-md p-1 cursor-pointer duration-150"
               onClick={() => setIsMenuOpen((isMenuOpen) => !isMenuOpen)}
             >
               {isMenuOpen ? <X /> : <Menu />}
