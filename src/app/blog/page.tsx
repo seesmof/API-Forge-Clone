@@ -190,9 +190,33 @@ export default function Page() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 mt-10">
-            {articles.map((article, index) => (
-              <ArticleComponent key={index} article={article} />
-            ))}
+            {activeTab === 0 ? (
+              articles.map((article, index) => (
+                <ArticleComponent key={index} article={article} />
+              ))
+            ) : activeTab === 1 ? (
+              articles
+                .filter((article) => article.category === "Architecture")
+                .map((article, index) => (
+                  <ArticleComponent key={index} article={article} />
+                ))
+            ) : activeTab === 2 ? (
+              articles
+                .filter((article) => article.category === "Enginerring")
+                .map((article, index) => (
+                  <ArticleComponent key={index} article={article} />
+                ))
+            ) : activeTab === 3 ? (
+              articles
+                .filter(
+                  (article) => article.category === "Developer Experience",
+                )
+                .map((article, index) => (
+                  <ArticleComponent key={index} article={article} />
+                ))
+            ) : (
+              <></>
+            )}
           </div>
 
           <div className="rounded-xl bg-stone-900 text-white mt-24">
