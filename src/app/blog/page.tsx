@@ -74,6 +74,7 @@ const articles: Article[] = [
     profilePictureName: "Alex",
     authorName: "Alex Kim",
     readingTime: 7,
+    href: "webhook-reliability-patterns",
   },
 ];
 

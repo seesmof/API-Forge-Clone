@@ -132,7 +132,7 @@ export default function Page() {
           <h2 className="font-bold text-2xl">Related Articles</h2>
 
           <div className="rounded-xl mt-6 overflow-clip shadow-md duration-300 hover:shadow-xl group bg-white">
-            <Link href="/blog/rest-vs-graphql-2026/">
+            <Link href="/blog/webhook-reliability-patterns/">
               <div className="h-60 overflow-clip">
                 <Image
                   src="/stats.jfif"
