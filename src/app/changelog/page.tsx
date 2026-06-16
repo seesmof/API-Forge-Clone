@@ -1,3 +1,4 @@
+import Badge from "@/components/small/Badge";
 import Link from "next/link";
 
 export default function Page() {
@@ -19,6 +20,28 @@ export default function Page() {
             </Link>{" "}
             <p>/</p>
             <p>Changelog</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="px-4 py-12 flex flex-col">
+          <div className="flex gap-5 items-center">
+            <Badge>v3.2.0</Badge>
+            <p className="text-stone-500 text-sm">February 15, 2026</p>
+          </div>
+          <h2 className="font-bold text-xl my-4">
+            Multi-Region Gateway & Enchanced SDK Generation
+          </h2>
+          <p>
+            Deploy your APIs across 12 global regions with automatic failover.
+            Plus, a completely revamped SDK generation pipeline with better type
+            safety.
+          </p>
+          <div className="flex items-start">
+            <div className="bg-green-100 text-green-600 font-bold text-sm rounded-md px-2 py-0.5">
+              Added
+            </div>
           </div>
         </div>
       </section>
