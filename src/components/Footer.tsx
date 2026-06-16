@@ -112,7 +112,7 @@ export default function Footer() {
               </Link>
               <Link
                 className="transition duration-150 hover:text-white"
-                href="#"
+                href="/changelog/"
               >
                 Changelog
               </Link>
@@ -124,25 +124,25 @@ export default function Footer() {
             <div className="flex flex-col gap-2 mt-2">
               <Link
                 className="transition duration-150 hover:text-white"
-                href="#"
+                href="/about/"
               >
                 About
               </Link>
               <Link
                 className="transition duration-150 hover:text-white"
-                href="#"
+                href="/blog/"
               >
                 Blog
               </Link>
               <Link
                 className="transition duration-150 hover:text-white"
-                href="#"
+                href="/contact/"
               >
                 Careers
               </Link>
               <Link
                 className="transition duration-150 hover:text-white"
-                href="#"
+                href="/contact/"
               >
                 Contact
               </Link>
