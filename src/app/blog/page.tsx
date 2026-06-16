@@ -61,6 +61,7 @@ const articles: Article[] = [
     profilePictureName: "Jordan",
     authorName: "Jordan Lee",
     readingTime: 6,
+    href: "api-versioning-best-practices",
   },
   {
     imageName: "stats",
