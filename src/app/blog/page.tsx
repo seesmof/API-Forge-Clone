@@ -39,6 +39,7 @@ const articles: Article[] = [
     profilePictureName: "Alex",
     authorName: "Alex Kim",
     readingTime: 6,
+    href: "api-rate-limiting-strategies",
   },
   {
     imageName: "gray",
