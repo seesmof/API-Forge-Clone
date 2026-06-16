@@ -1,5 +1,6 @@
+import NavigationSection from "@/components/blog/NavigationSection";
+import ShareSection from "@/components/blog/ShareSection";
 import Badge from "@/components/small/Badge";
-import { Facebook, Link2, LinkedIn, X } from "@deemlol/next-icons";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,31 +8,8 @@ export default function Page() {
   return (
     <>
       <section className="bg-white">
-        <div className="px-4 py-6 flex flex-col">
-          <nav className="flex flex-col text-sm gap-4">
-            <Link
-              href="/blog/"
-              className="text-orange-600 duration-150 hover:text-orange-700"
-            >
-              Back to Blog
-            </Link>
-            <div className="flex gap-2">
-              <Link
-                href="/"
-                className="text-stone-500 duration-100 hover:text-stone-900"
-              >
-                Home
-              </Link>{" "}
-              /{" "}
-              <Link
-                href="/blog/"
-                className="text-stone-500 duration-100 hover:text-stone-900"
-              >
-                Blog
-              </Link>{" "}
-              / Article
-            </div>
-          </nav>
+        <div className="px-4 py-6 flex flex-col mx-auto max-w-7xl">
+          <NavigationSection />
 
           <article className="flex flex-col">
             <Badge className="my-5">Architecture</Badge>
@@ -134,23 +112,7 @@ export default function Page() {
             <div className="bg-slate-100 h-px w-full my-8"></div>
           </article>
 
-          <article>
-            <p className="text-sm font-semibold">Share this article</p>
-            <div className="flex gap-3 mt-3">
-              <div className="rounded-full duration-150 hover:bg-blue-600 hover:text-white cursor-pointer h-10 w-10 bg-stone-100 flex items-center justify-center">
-                <X />
-              </div>
-              <div className="rounded-full duration-150 hover:bg-blue-600 hover:text-white cursor-pointer h-10 w-10 bg-stone-100 flex items-center justify-center">
-                <Facebook />
-              </div>
-              <div className="rounded-full duration-150 hover:bg-blue-600 hover:text-white cursor-pointer h-10 w-10 bg-stone-100 flex items-center justify-center">
-                <LinkedIn />
-              </div>
-              <div className="rounded-full duration-150 hover:bg-blue-600 hover:text-white cursor-pointer h-10 w-10 bg-stone-100 flex items-center justify-center">
-                <Link2 />
-              </div>
-            </div>
-          </article>
+          <ShareSection />
         </div>
       </section>
 
