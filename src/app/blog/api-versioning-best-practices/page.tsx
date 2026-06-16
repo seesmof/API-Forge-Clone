@@ -20,7 +20,7 @@ export default function Page() {
               Strategies for evolving your API without breaking existing
               integrations, from URL versioning to content negotiation.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mt-4">
               <Image
                 src="/Jordan.jfif"
                 width={40}

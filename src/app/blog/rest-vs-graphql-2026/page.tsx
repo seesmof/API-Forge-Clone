@@ -20,7 +20,7 @@ export default function Page() {
               A practical comparison of REST and GraphQL for modern API
               development, with guidance on when to use each approach.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mt-4">
               <Image
                 src="/Maya.jfif"
                 width={40}

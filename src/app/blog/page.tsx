@@ -51,6 +51,7 @@ const articles: Article[] = [
     profilePictureName: "Priya",
     authorName: "Priya Sharma",
     readingTime: 8,
+    href: "building-developer-portals",
   },
   {
     imageName: "glasses",

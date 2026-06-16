@@ -20,7 +20,7 @@ export default function Page() {
               How to build webhook delivery systems that never lose events, from
               retry strategies to dead letter queues.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mt-4">
               <Image
                 src="/Alex.jfif"
                 width={40}

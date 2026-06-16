@@ -20,7 +20,7 @@ export default function Page() {
               Learn proven rate limiting patterns that protect your APIs without
               frustrating legitimate users.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mt-4">
               <Image
                 src="/Alex.jfif"
                 width={40}
