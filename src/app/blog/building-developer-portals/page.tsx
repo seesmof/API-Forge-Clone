@@ -2,7 +2,6 @@ import NavigationSection from "@/components/blog/NavigationSection";
 import ShareSection from "@/components/blog/ShareSection";
 import Badge from "@/components/small/Badge";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Page() {
   return (
