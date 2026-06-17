@@ -6,7 +6,7 @@ import { useState } from "react";
 
 interface Article {
   imageName: string;
-  category: "Architecture" | "Enginerring" | "Developer Experience";
+  category: "Architecture" | "Engineering" | "Developer Experience";
   publishingDate: string;
   title: string;
   description: string;
@@ -31,7 +31,7 @@ const articles: Article[] = [
   },
   {
     imageName: "server",
-    category: "Enginerring",
+    category: "Engineering",
     publishingDate: "Feb 15, 2026",
     title: "API Rate Limiting Strategies That Actually Work",
     description:
@@ -67,7 +67,7 @@ const articles: Article[] = [
   },
   {
     imageName: "stats",
-    category: "Enginerring",
+    category: "Engineering",
     publishingDate: "Feb 28, 2026",
     title: "Webhook Reliability Patterns for Production Systems",
     description:
@@ -205,7 +205,7 @@ export default function Page() {
                 ))
             ) : activeTab === 2 ? (
               articles
-                .filter((article) => article.category === "Enginerring")
+                .filter((article) => article.category === "Engineering")
                 .map((article, index) => (
                   <ArticleComponent key={index} article={article} />
                 ))
